@@ -1,0 +1,11 @@
+version: "3.1"
+
+stories:
+- story: Saudação e informação
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+    - intent: horario_atendimento
+    - action: utter_horario_atendimento
+    - intent: despedida
+    - action: utter_despedida

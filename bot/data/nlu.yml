@@ -1,0 +1,30 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - Olá
+    - Oi
+    - E aí
+    - Bom dia
+    - Boa tarde
+
+- intent: despedida
+  examples: |
+    - Tchau
+    - Até mais
+    - Até logo
+    - Falou
+
+- intent: horario_atendimento
+  examples: |
+    - Qual o horário de atendimento?
+    - Quando vocês abrem?
+    - Até que horas vocês atendem?
+
+- intent: agradecimento
+  examples: |
+    - Obrigado
+    - Valeu
+    - Agradeço
+    - Obrigado pela ajuda

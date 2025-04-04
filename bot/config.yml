@@ -1,0 +1,18 @@
+version: "3.1"
+
+language: pt  # 🔹 Adicione esta linha para definir o idioma do bot
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+- name: ResponseSelector
+- name: FallbackClassifier
+  threshold: 0.3
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+
+assistant_id: 20250404-135937-lead-meat

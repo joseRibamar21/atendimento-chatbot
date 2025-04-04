@@ -1,0 +1,20 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - despedida
+  - horario_atendimento
+  - agradecimento
+
+responses:
+  utter_saudacao:
+    - text: "Olá! Como posso te ajudar hoje?"
+  utter_despedida:
+    - text: "Até logo! Tenha um ótimo dia!"
+  utter_horario_atendimento:
+    - text: "Nosso horário de atendimento é das 8h às 18h de segunda a sexta."
+  utter_agradecimento:
+    - text: "De nada! Estou sempre à disposição."
+
+actions:
+  - action_customizada
