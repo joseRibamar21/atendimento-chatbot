@@ -12,7 +12,9 @@ Este é um projeto simples de chatbot de atendimento desenvolvido com o framewor
 
 - cURL / Rasa Shell (para testes)
 
-### 🚀 Passo 1: Rodar o container
+## 🚀 Execução do Projeto
+
+### 🐋 Passo 1: Rodar o container
 ```bash
 docker build -t rasa_bot .
 docker run -d -p 5005:5005 -p 2222:22 --name chatbot_container rasa_bot
@@ -77,7 +79,7 @@ curl -X POST "http://localhost:5050/webhooks/rest/webhook" \
 ```
 
 
-## Passo 5(opcional): Rodar actions
+## 🏗️ Passo 5(opcional): Rodar actions
 Se o seu bot tem ações personalizadas, você pode rodar o servidor de ações com:
 ```sh
 ../venv/bin/rasa run actions
