@@ -1,4 +1,16 @@
-# Chatbot Atendimento
+# 🤖 Chatbot de Atendimento com Rasa
+Este é um projeto simples de chatbot de atendimento desenvolvido com o framework Rasa, rodando em ambiente Dockerizado. Ele simula um assistente virtual capaz de cumprimentar o usuário, coletar informações para agendamento, e verificar disponibilidade de datas. Também permite consultar o próximo dia disponível para atendimento.
+
+## 📦 Tecnologias Utilizadas
+- Rasa Open Source (NLU + Core)
+
+- Python (ações personalizadas)
+
+- Docker (ambiente isolado e replicável)
+
+- SSH remoto via VSCode (acesso simplificado ao container)
+
+- cURL / Rasa Shell (para testes)
 
 ### 🚀 Passo 1: Rodar o container
 ```bash
