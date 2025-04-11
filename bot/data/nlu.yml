@@ -3,28 +3,54 @@ version: "3.1"
 nlu:
 - intent: saudacao
   examples: |
-    - Olá
-    - Oi
-    - E aí
-    - Bom dia
-    - Boa tarde
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - e aí
+    - tudo bom?
+    - tudo bem?
+    - como você está?
+    - como vai?
+    - como você está hoje?
 
-- intent: despedida
+- intent: affirm
   examples: |
-    - Tchau
-    - Até mais
-    - Até logo
-    - Falou
+    - sim
+    - claro
+    - quero
+    - sim, por favor
 
-- intent: horario_atendimento
+- intent: deny
   examples: |
-    - Qual o horário de atendimento?
-    - Quando vocês abrem?
-    - Até que horas vocês atendem?
+    - não
+    - agora não
+    - mais tarde
+    - não quero
 
-- intent: agradecimento
+- intent: inform
   examples: |
-    - Obrigado
-    - Valeu
-    - Agradeço
-    - Obrigado pela ajuda
+    - Me chamo [Ana](nome)
+    - Meu nome é [Carlos](nome)
+    - Pode ser dia [12 de abril](data)
+    - Dia [15/04/2025](data)
+    - Quero agendar para [amanhã](data)
+    - Estou disponível no dia [20 de março](data)
+    - O nome é [João](nome)
+    - O dia [25 de dezembro](data) está bom
+    - O nome é [Maria](nome)
+    - O dia [30 de janeiro](data) funciona
+    - O nome é [Pedro](nome)
+    - O dia [5 de fevereiro](data) é bom
+    - [Gabriel](nome)
+    - [Ana Paula](nome)
+
+- intent: proximo_dia_livre
+  examples: |
+    - Qual é o próximo dia livre?
+    - Quando posso marcar?
+    - Tem algum dia disponível?
+    - Qual é a próxima data disponível?
+    - Me diga o próximo dia livre
+    - Tem algum dia livre?
+    - Qual é o próximo dia que você tem?

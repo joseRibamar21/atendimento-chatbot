@@ -2,19 +2,47 @@ version: "3.1"
 
 intents:
   - saudacao
-  - despedida
-  - horario_atendimento
-  - agradecimento
+  - affirm
+  - deny
+  - inform
+  - proximo_dia_livre
+
+entities:
+  - nome
+  - data
+
+slots:
+  nome:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nome
+
+  data:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: data
 
 responses:
   utter_saudacao:
-    - text: "Olá! Como posso te ajudar hoje?"
-  utter_despedida:
-    - text: "Até logo! Tenha um ótimo dia!"
-  utter_horario_atendimento:
-    - text: "Nosso horário de atendimento é das 8h às 18h de segunda a sexta."
-  utter_agradecimento:
-    - text: "De nada! Estou sempre à disposição."
+    - text: "Olá! Tudo bem? Deseja agendar uma consulta?"
+
+  utter_ask_nome:
+    - text: "Qual é o seu nome?"
+
+  utter_ask_data:
+    - text: "Qual dia você gostaria de agendar?"
+
+  utter_dia_ocupado:
+    - text: "Já temos uma consulta marcada nesse dia. Por favor, escolha outro."
+
+  utter_confirmacao_agendada:
+    - text: "Consulta marcada para {nome} no dia {data}!"
+
+  utter_proximo_dia_livre:
+    - text: "O próximo dia livre é {data}."
 
 actions:
-  - action_customizada
+  - action_verificar_disponibilidade
+  - action_proximo_dia_livre

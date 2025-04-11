@@ -63,3 +63,10 @@ curl -X POST "http://localhost:5050/webhooks/rest/webhook" \
      -H "Content-Type: application/json" \
      -d '{"sender": "user", "message": "Olá"}'
 ```
+
+
+## Passo 5(opcional): Rodar actions
+Se o seu bot tem ações personalizadas, você pode rodar o servidor de ações com:
+```sh
+../venv/bin/rasa run actions
+``` 

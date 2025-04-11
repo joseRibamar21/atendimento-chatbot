@@ -1,11 +1,29 @@
 version: "3.1"
-
 stories:
-- story: Saudação e informação
+- story: agendar consulta
   steps:
-    - intent: saudacao
-    - action: utter_saudacao
-    - intent: horario_atendimento
-    - action: utter_horario_atendimento
-    - intent: despedida
-    - action: utter_despedida
+    - intent: agendar_consulta
+    - action: utter_ask_nome
+    - intent: inform
+    - action: utter_ask_data
+    - intent: inform
+    - action: utter_ask_hora
+    - intent: inform
+    - action: action_agendar_consulta
+
+- story: perguntar horários
+  steps:
+    - intent: horarios_funcionamento
+    - action: utter_horarios_funcionamento
+
+- story: tentar agendar com horário ocupado
+  steps:
+    - intent: agendar_consulta
+    - action: utter_ask_nome
+    - intent: inform
+    - action: utter_ask_data
+    - intent: inform
+    - action: utter_ask_hora
+    - intent: inform
+    - action: action_agendar_consulta
+    - action: utter_ask_hora  # Reforça que ele pedirá de novo caso esteja ocupado

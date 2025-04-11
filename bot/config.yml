@@ -4,15 +4,19 @@ language: pt  # 🔹 Adicione esta linha para definir o idioma do bot
 
 pipeline:
 - name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
 - name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
 - name: ResponseSelector
-- name: FallbackClassifier
-  threshold: 0.3
+  epochs: 100
 
 policies:
 - name: MemoizationPolicy
 - name: RulePolicy
-- name: TEDPolicy
-
-assistant_id: 20250404-135937-lead-meat
+- name: UnexpecTEDIntentPolicy
+  max_history: 5
+  epochs: 100
+assistant_id: 20250405-015808-metal-wave

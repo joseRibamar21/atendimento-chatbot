@@ -1,22 +1,31 @@
 version: "3.1"
 
 rules:
-- rule: Responder saudação
+- rule: Saudação e oferta de agendamento
   steps:
     - intent: saudacao
     - action: utter_saudacao
 
-- rule: Responder despedida
+- rule: Agendar após affirm
   steps:
-    - intent: despedida
-    - action: utter_despedida
+    - intent: affirm
+    - action: utter_ask_nome
 
-- rule: Responder horário de atendimento
+- rule: Após nome, pedir data
   steps:
-    - intent: horario_atendimento
-    - action: utter_horario_atendimento
+    - intent: inform
+      entities:
+        - nome: true
+    - action: utter_ask_data
 
-- rule: Responder agradecimento
+- rule: Verificar e agendar consulta
   steps:
-    - intent: agradecimento
-    - action: utter_agradecimento
+    - intent: inform
+      entities:
+        - data: true
+    - action: action_verificar_disponibilidade
+
+- rule: Proximo dia livre
+  steps:
+    - intent: proximo_dia_livre
+    - action: action_proximo_dia_livre
